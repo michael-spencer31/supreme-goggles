@@ -10,6 +10,10 @@ function getContrastColor(hex) {
 	return brightness > 125 ? '#000000' : '#ffffff';
 }
 
+function rgbToHex(rgb) {
+	const result = rgb.match(/\d+/g).map(x => parseInt(x).toString(16).padStart(2, '0'));
+	return `#${result.join('')}`;
+}
 
 
 // Initialize Sortable instance once
